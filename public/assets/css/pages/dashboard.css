@@ -1,0 +1,186 @@
+/* Dashboard — aligned with Tasks: stats-row / stat-card (app-base), card + table-wrap */
+
+.card.dash-card {
+  padding-top: 14px;
+}
+.card.dash-card .card-head {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Clickable stat tiles */
+a.dash-stat-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+a.dash-stat-link:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+a.dash-stat-link--accent:hover {
+  border-color: var(--accent);
+}
+a.dash-stat-link--warn:hover {
+  border-color: var(--danger-border);
+}
+
+.dash-stat-link--accent {
+  border-left: 3px solid var(--accent);
+}
+.dash-stat-link--accent .stat-value {
+  color: var(--accent);
+}
+
+.dash-stat-link--warn {
+  border-left: 3px solid var(--danger);
+}
+
+.dash-stat-static {
+  cursor: default;
+}
+
+/* Card section hints */
+.dash-card-head-hint {
+  font-weight: 500;
+  color: var(--text-3);
+  font-size: 12px;
+}
+.dash-card-desc {
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.45;
+  margin: -4px 0 12px;
+  padding: 0 16px;
+  max-width: 72ch;
+}
+.dash-card-desc code {
+  font-size: 0.92em;
+  padding: 1px 4px;
+  border-radius: 4px;
+  background: var(--surface-2);
+}
+.card > .dash-card-desc {
+  margin-top: -8px;
+}
+.dash-card-body-pad {
+  margin: 0;
+  padding: 0 16px 16px;
+}
+
+/* Team table: header alignment overrides (app-base centers mid columns) */
+.dash-team-wrap {
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.dash-team-table thead th.text-right {
+  text-align: right;
+}
+.dash-team-table tbody td.text-right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.dash-team-table tbody td.dash-table-empty {
+  text-align: center !important;
+  color: var(--text-3);
+  padding: 20px 14px !important;
+}
+
+/* Overdue list inside card */
+.dash-overdue-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 16px 16px;
+}
+.dash-overdue-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.dash-overdue-list li:last-child {
+  border-bottom: none;
+}
+.dash-overdue-link {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+}
+.dash-overdue-link:hover {
+  text-decoration: underline;
+}
+.dash-overdue-meta {
+  font-size: 12px;
+  color: var(--text-2);
+  text-align: right;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.dash-muted {
+  color: var(--text-3);
+  font-size: 13px;
+}
+
+@media (max-width: 520px) {
+  .dash-overdue-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dash-overdue-meta {
+    text-align: left;
+  }
+}
+
+/* Tips */
+.dash-tips .dash-tips-list {
+  margin: 0;
+  padding: 0 16px 16px 28px;
+  list-style: disc;
+  color: var(--text-2);
+  font-size: 12px;
+  line-height: 1.55;
+}
+.dash-tips .dash-tips-list li {
+  margin-bottom: 8px;
+}
+.dash-tips .dash-tips-list li:last-child {
+  margin-bottom: 0;
+}
+.dash-tips code {
+  font-size: 0.88em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--surface-2);
+}
+.dash-tips a {
+  color: var(--accent);
+}
+
+/* Stats row: same mobile behavior as tasks-index */
+@media (max-width: 767px) {
+  .stats-row {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+  .stats-row::-webkit-scrollbar {
+    display: none;
+  }
+  .stat-card {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: unset;
+  }
+}

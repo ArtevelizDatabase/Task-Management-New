@@ -1,0 +1,223 @@
+/* Rich Text modal/editor utilities */
+.rt-js-editor-shell .codex-editor__redactor {
+  padding-bottom: 24px !important;
+  min-height: 90px !important;
+}
+
+.rt-js-editor-shell .ce-block__content,
+.rt-js-editor-shell .ce-toolbar__content {
+  max-width: 100%;
+}
+
+/* ── Dark mode fixes for Editor.js ── */
+
+/* Text & block content */
+html[data-theme="dark"] .rt-js-editor-shell {
+  color: #e6e9ef;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-paragraph,
+html[data-theme="dark"] .rt-js-editor-shell .ce-header,
+html[data-theme="dark"] .rt-js-editor-shell [contenteditable] {
+  color: #e6e9ef !important;
+  caret-color: #60a5fa;
+}
+
+/* Placeholder text */
+html[data-theme="dark"] .rt-js-editor-shell .ce-paragraph[data-placeholder]::before,
+html[data-theme="dark"] .rt-js-editor-shell .codex-editor--empty .ce-block:first-child .ce-paragraph::before {
+  color: #8892a6 !important;
+  opacity: 1;
+}
+
+/* Toolbar (inline toolbar + block toolbar) */
+html[data-theme="dark"] .rt-js-editor-shell .ce-toolbar__actions,
+html[data-theme="dark"] .rt-js-editor-shell .ce-toolbar__plus,
+html[data-theme="dark"] .rt-js-editor-shell .ce-toolbar__settings-btn {
+  background: #1f2430 !important;
+  border: 1px solid #2b3140 !important;
+  color: #bac2d1 !important;
+  border-radius: 6px;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-toolbar__plus:hover,
+html[data-theme="dark"] .rt-js-editor-shell .ce-toolbar__settings-btn:hover {
+  background: #2b3140 !important;
+  color: #e6e9ef !important;
+}
+
+/* Inline toolbar (bold/italic/link popup) */
+html[data-theme="dark"] .rt-js-editor-shell .ce-inline-toolbar {
+  background: #1f2430 !important;
+  border: 1px solid #2b3140 !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.45) !important;
+  border-radius: 8px;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-inline-tool,
+html[data-theme="dark"] .rt-js-editor-shell .ce-inline-toolbar__dropdown {
+  color: #bac2d1 !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-inline-tool:hover,
+html[data-theme="dark"] .rt-js-editor-shell .ce-inline-tool--active {
+  background: #2b3140 !important;
+  color: #60a5fa !important;
+}
+
+/* Inline toolbar link input */
+html[data-theme="dark"] .rt-js-editor-shell .ce-inline-tool-input {
+  background: #161a22 !important;
+  border: 1px solid #3a4357 !important;
+  color: #e6e9ef !important;
+  border-radius: 6px;
+}
+
+/* Block settings popup (dots menu) */
+html[data-theme="dark"] .rt-js-editor-shell .ce-settings,
+html[data-theme="dark"] .rt-js-editor-shell .ce-popover {
+  background: #1f2430 !important;
+  border: 1px solid #2b3140 !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.45) !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-settings__button,
+html[data-theme="dark"] .rt-js-editor-shell .ce-popover-item__title,
+html[data-theme="dark"] .rt-js-editor-shell .ce-popover-item {
+  color: #bac2d1 !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-settings__button:hover,
+html[data-theme="dark"] .rt-js-editor-shell .ce-popover-item:hover {
+  background: #2b3140 !important;
+  color: #e6e9ef !important;
+}
+
+/* Block focus outline */
+html[data-theme="dark"] .rt-js-editor-shell .ce-block--selected .ce-block__content,
+html[data-theme="dark"] .rt-js-editor-shell .ce-block:hover .ce-block__content {
+  background: #1f2430 !important;
+  border-radius: 4px;
+}
+
+/* List items */
+html[data-theme="dark"] .rt-js-editor-shell .cdx-list__item {
+  color: #e6e9ef !important;
+}
+
+/* Quote block */
+html[data-theme="dark"] .rt-js-editor-shell .cdx-quote__text,
+html[data-theme="dark"] .rt-js-editor-shell .cdx-quote__caption {
+  color: #e6e9ef !important;
+  border-color: #3a4357 !important;
+}
+
+/* Header blocks */
+html[data-theme="dark"] .rt-js-editor-shell h1,
+html[data-theme="dark"] .rt-js-editor-shell h2,
+html[data-theme="dark"] .rt-js-editor-shell h3,
+html[data-theme="dark"] .rt-js-editor-shell h4,
+html[data-theme="dark"] .rt-js-editor-shell h5,
+html[data-theme="dark"] .rt-js-editor-shell h6 {
+  color: #f8fafc !important;
+}
+
+/* ── "Convert to" inline toolbar conversion dropdown ── */
+html[data-theme="dark"] .rt-js-editor-shell .ce-conversion-toolbar,
+html[data-theme="dark"] .ce-conversion-toolbar {
+  background: #1f2430 !important;
+  border: 1px solid #2b3140 !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.5) !important;
+  border-radius: 8px !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-conversion-toolbar__label,
+html[data-theme="dark"] .ce-conversion-toolbar__label {
+  color: #8892a6 !important;
+  font-size: 10px !important;
+  letter-spacing: .6px !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-conversion-tool,
+html[data-theme="dark"] .ce-conversion-tool {
+  color: #bac2d1 !important;
+  border-radius: 6px !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-conversion-tool:hover,
+html[data-theme="dark"] .ce-conversion-tool:hover {
+  background: #2b3140 !important;
+  color: #e6e9ef !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-conversion-tool--focused,
+html[data-theme="dark"] .ce-conversion-tool--focused {
+  background: #2b3140 !important;
+  color: #60a5fa !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-conversion-tool__icon,
+html[data-theme="dark"] .ce-conversion-tool__icon {
+  background: #2b3140 !important;
+  border: 1px solid #3a4357 !important;
+  color: #bac2d1 !important;
+  border-radius: 5px !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-conversion-tool:hover .ce-conversion-tool__icon,
+html[data-theme="dark"] .ce-conversion-tool:hover .ce-conversion-tool__icon {
+  background: #3a4357 !important;
+  color: #e6e9ef !important;
+}
+html[data-theme="dark"] .rt-js-editor-shell .ce-conversion-tool__title,
+html[data-theme="dark"] .ce-conversion-tool__title {
+  color: inherit !important;
+}
+
+/* ── Popover v2 (newer Editor.js versions) ── */
+html[data-theme="dark"] .ce-popover,
+html[data-theme="dark"] .ce-popover--inline {
+  background: #1f2430 !important;
+  border: 1px solid #2b3140 !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.5) !important;
+  border-radius: 8px !important;
+}
+html[data-theme="dark"] .ce-popover__search .cdx-search-field {
+  background: #161a22 !important;
+  border: 1px solid #3a4357 !important;
+  border-radius: 6px !important;
+}
+html[data-theme="dark"] .ce-popover__search .cdx-search-field__input {
+  background: transparent !important;
+  color: #e6e9ef !important;
+}
+html[data-theme="dark"] .ce-popover__search .cdx-search-field__input::placeholder {
+  color: #8892a6 !important;
+}
+html[data-theme="dark"] .ce-popover-item__icon {
+  background: #2b3140 !important;
+  border: 1px solid #3a4357 !important;
+  color: #bac2d1 !important;
+  border-radius: 5px !important;
+}
+html[data-theme="dark"] .ce-popover-item__title {
+  color: #bac2d1 !important;
+}
+html[data-theme="dark"] .ce-popover-item:hover,
+html[data-theme="dark"] .ce-popover-item--focused {
+  background: #2b3140 !important;
+}
+html[data-theme="dark"] .ce-popover-item:hover .ce-popover-item__icon,
+html[data-theme="dark"] .ce-popover-item--focused .ce-popover-item__icon {
+  background: #3a4357 !important;
+  color: #e6e9ef !important;
+}
+html[data-theme="dark"] .ce-popover-item:hover .ce-popover-item__title,
+html[data-theme="dark"] .ce-popover-item--focused .ce-popover-item__title {
+  color: #e6e9ef !important;
+}
+html[data-theme="dark"] .ce-popover-item-separator__line {
+  background: #2b3140 !important;
+}
+
+/* ── Inline toolbar type selector (T▾ dropdown) ── */
+html[data-theme="dark"] .ce-inline-toolbar__dropdown {
+  background: #1f2430 !important;
+  border-right: 1px solid #2b3140 !important;
+  color: #bac2d1 !important;
+}
+html[data-theme="dark"] .ce-inline-toolbar__dropdown:hover {
+  background: #2b3140 !important;
+  color: #e6e9ef !important;
+}
+html[data-theme="dark"] .ce-inline-toolbar__buttons {
+  border-left: 1px solid #2b3140 !important;
+}

@@ -1,0 +1,28 @@
+.p-trash-head { margin-bottom: 20px; }
+.p-trash-desc { font-size: 13px; color: var(--text-2); }
+.p-trash-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.p-trash-selected { font-size: 12px; color: var(--text-3); }
+.p-trash-actions { display: flex; gap: 8px; align-items: center; }
+.p-trash-actions .form-control,
+.p-trash-actions .btn {
+  min-height: 36px;
+}
+.p-trash-select { width: 170px !important; }
+.p-checkbox-col { width: 36px; }
+.p-cell-id { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+.p-cell-date { font-size: 12px; color: var(--text-3); }
+.u-inline-form { display: inline; }
+.u-icon-xs { width: 12px; height: 12px; }
+
+@media (max-width: 767px) {
+  .p-trash-actions { width: 100%; }
+  .p-trash-select, .p-trash-actions .btn { width: 100%; }
+}

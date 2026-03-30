@@ -1,0 +1,49 @@
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* ── Neutral dark charcoal — no blue tint ── */
+  --bg: #141414;          /* main page bg */
+  --surface: #1c1c1c;     /* cards, table, topbar */
+  --surface-2: #252525;   /* hover rows, dropdowns */
+  --sidebar-bg: #0f0f0f;  /* sidebar — darkest */
+
+  --border: #2e2e2e;
+  --border-2: #3d3d3d;
+
+  --text: #e8e8e8;
+  --text-2: #a0a0a0;
+  --text-3: #636363;
+
+  --accent: #60a5fa;
+  --accent-soft: #162035;
+  --focus-ring: rgba(96, 165, 250, 0.18);
+
+  --danger: #f87171;
+  --danger-soft: #2e1515;
+  --success: #4ade80;
+  --success-soft: #122a1a;
+  --warn: #fbbf24;
+  --warn-soft: #2a2008;
+
+  --btn-primary-bg: #e8e8e8;
+  --btn-primary-bg-hover: #ffffff;
+  --btn-primary-text: #0f0f0f;
+  --on-solid: #0f0f0f;
+  --text-strong: #ffffff;
+
+  --danger-border: #4d1f1f;
+  --danger-soft-hover: #3d1a1a;
+  --success-border: #134d28;
+
+  --priority-low-bg: #0e2418;
+  --priority-low-text: #86efac;
+  --priority-medium-bg: #281f08;
+  --priority-medium-text: #fcd34d;
+  --priority-high-bg: #271608;
+  --priority-high-text: #fdba74;
+  --priority-critical-bg: #2c1010;
+  --priority-critical-text: #fca5a5;
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.22);
+}

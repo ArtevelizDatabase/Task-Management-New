@@ -1,0 +1,210 @@
+/* Full-width layout like /tasks — spacing from .page-header in app-base.css */
+.fields-page-wrap {
+  width: 100%;
+  max-width: 100%;
+}
+.fields-page-wrap .page-header-left {
+  min-width: 0;
+}
+.fields-page-wrap .page-sub {
+  overflow-wrap: break-word;
+}
+.fields-page-wrap .page-sub .fields-count {
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid var(--border);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-3);
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+.spacer-12 { height:12px; }
+.field-type-icon-wrap { width:32px; height:32px; border-radius:7px; background:var(--surface-2); border:1px solid var(--border); display:grid; place-items:center; flex-shrink:0; }
+.p-fields-inline-code {
+  font-family: var(--mono);
+  background: var(--surface-2);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+/* Scope tabs */
+/* ── Core Features section ── */
+.core-features-section {
+  margin-bottom: 16px;
+}
+.core-features-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.core-features-hint {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-3);
+}
+.core-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 640px) {
+  .core-features-grid { grid-template-columns: 1fr; }
+}
+.core-feature-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color .15s, background .15s;
+}
+.core-feature-card.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.cf-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.cf-icon-progress { background: #dbeafe; color: #2563eb; }
+.cf-icon-deadline { background: #fef3c7; color: #d97706; }
+html[data-theme="dark"] .cf-icon-progress { background: #1e3a5f; color: #60a5fa; }
+html[data-theme="dark"] .cf-icon-deadline { background: #4a3000; color: #fbbf24; }
+.cf-info { flex: 1; min-width: 0; }
+.cf-name { font-weight: 600; font-size: 13px; margin-bottom: 2px; }
+.cf-desc { font-size: 11px; color: var(--text-2); line-height: 1.4; }
+.cf-toggle { flex-shrink: 0; }
+
+.scope-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.scope-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px; border-radius: 100px;
+  font-size: 12px; font-weight: 500;
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--text-2); cursor: pointer; transition: all .15s;
+}
+.scope-tab:hover { background: var(--surface-2); color: var(--text); border-color: var(--border-2); }
+.scope-tab.active { background: var(--accent); color: var(--btn-primary-text); border-color: var(--accent); }
+.scope-tab-count {
+  background: rgba(0,0,0,.12); color: inherit;
+  font-size: 10px; font-weight: 700;
+  padding: 1px 5px; border-radius: 100px; min-width: 18px; text-align: center;
+}
+.scope-tab.active .scope-tab-count { background: rgba(255,255,255,.25); }
+
+/* Scope badge on field row */
+.scope-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10px; font-weight: 600; padding: 2px 7px;
+  border-radius: 100px; margin-left: 6px; vertical-align: middle;
+  letter-spacing: .2px;
+}
+.scope-task  { background: var(--accent-soft);   color: var(--accent); }
+.scope-setor { background: var(--success-soft);  color: var(--success); }
+.scope-both  { background: var(--warn-soft);     color: var(--warn); }
+
+/* Scope selector in modal */
+.scope-selector-group { margin-top: 4px; }
+.scope-radio-group { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+.scope-radio { cursor: pointer; }
+.scope-radio input[type="radio"] { display: none; }
+.scope-radio-box {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 8px;
+  font-size: 12px; font-weight: 500;
+  border: 1.5px solid transparent; cursor: pointer;
+  transition: all .15s; opacity: .55;
+}
+.scope-radio input[type="radio"]:checked + .scope-radio-box { opacity: 1; border-color: currentColor; }
+.scope-hint { font-size: 11px; color: var(--text-3); margin-top: 6px; min-height: 16px; }
+
+.p-fields-map-banner {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  background:var(--success-soft);
+  border:1px solid var(--success-border);
+  border-radius:var(--radius);
+  margin-bottom:12px;
+  font-size:12px;
+  color:var(--success);
+}
+.p-fields-required-tag { color:var(--danger); font-size:10px; margin-left:3px; }
+.p-fields-key { font-family:var(--mono); }
+.p-fields-sync {
+  color:var(--success);
+  font-weight:500;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+}
+.u-soft-readonly {
+  background: var(--surface-2);
+  color: var(--text-3);
+}
+.u-mono { font-family: var(--mono); }
+.p-options-hint { color: var(--text-3); }
+.p-sync-box {
+  padding:12px;
+  background:var(--surface-2);
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+}
+.p-sync-label {
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.p-sync-optional { font-size:10px; font-weight:400; color:var(--text-3); }
+.p-sync-help { font-size:11px; color:var(--text-3); margin-top:4px; }
+.u-mt-4 { margin-top: 4px; }
+
+@media (max-width: 767px) {
+  .fields-page-wrap .page-sub .fields-count {
+    display: block;
+    margin-left: 0;
+    margin-top: 6px;
+    padding-left: 0;
+    border-left: 0;
+  }
+  .scope-tabs {
+    gap: 6px;
+  }
+  .scope-tab {
+    flex: 1 1 auto;
+    min-width: calc(50% - 4px);
+    justify-content: center;
+  }
+  .core-features-grid {
+    gap: 8px;
+  }
+  .core-feature-card {
+    padding: 12px 14px;
+    flex-wrap: wrap;
+  }
+}
+.u-icon-sm { width:14px; height:14px; }
+.u-icon-xs { width:12px; height:12px; }
+.u-icon-xxs { width:11px; height:11px; }

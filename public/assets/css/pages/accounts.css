@@ -1,0 +1,109 @@
+.accounts-page{
+  display:flex;
+  flex-direction:column;
+  gap:14px; /* space between filter card and table card */
+}
+
+.accounts-toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  justify-content:space-between;
+}
+.accounts-actions{
+  display:flex;
+  gap:8px;
+}
+
+.accounts-filter{
+  display:flex;
+  flex-wrap:nowrap;
+  gap:8px;
+  align-items:center;
+}
+.accounts-filter > *{
+  min-height:34px;
+}
+.accounts-filter select{ width:150px; flex:0 0 auto; }
+.accounts-filter input[type="text"]{ flex:1 1 auto; min-width:0; }
+
+.accounts-filter-actions{
+  margin-left:auto;
+  display:flex;
+  gap:8px;
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+
+@media (max-width: 720px){
+  .accounts-filter{
+    flex-wrap:wrap;
+  }
+  .accounts-filter input[type="text"]{
+    flex:1 1 220px;
+    min-width:200px;
+  }
+  .accounts-filter-actions{
+    margin-left:0;
+  }
+}
+
+/* Make the top filter card feel lighter */
+.accounts-toolbar .btn{
+  padding-top:6px;
+  padding-bottom:6px;
+}
+
+.accounts-create{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.ac-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+.ac-row-1 input[name="name"]{
+  flex: 1 1 320px;
+  min-width: 260px;
+}
+.ac-row-1 select,
+.ac-row-1 button{
+  flex: 0 0 auto;
+}
+.ac-row-1 select{ min-width: 130px; }
+.ac-row-2 > *{
+  flex: 1 1 180px;
+  min-width: 170px;
+}
+.ac-row-2 select{ min-width: 170px; }
+.ac-row-2 input[name="notes"]{ flex: 2 1 240px; min-width: 220px; }
+
+/* Slightly tighter padding on cards in this page */
+.card .card-body{
+  padding:12px 14px;
+}
+
+/* Table should not add extra top margin; spacing handled by accounts-page gap */
+.accounts-table{
+  margin-top:0;
+}
+.accounts-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+}
+.accounts-table th,
+.accounts-table td{
+  padding:12px 14px;
+  border-bottom:1px solid var(--border);
+  vertical-align:middle;
+}
+.accounts-row-form,
+.inline-form{
+  display:inline-block;
+  margin-left:6px;
+}

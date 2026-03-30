@@ -1,0 +1,234 @@
+.extras-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin: 2rem 0 0;
+  flex-wrap: wrap;
+}
+
+.extras-tab {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  transition: 0.15s;
+}
+
+.extras-tab.active {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+.extras-panel {
+  display: none;
+  padding: 1.25rem 0;
+}
+
+.extras-panel.active {
+  display: block;
+}
+
+.comment-item {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.comment-bubble {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+}
+
+.comment-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.comment-body {
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.activity-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light, var(--border));
+  font-size: 0.82rem;
+}
+
+.activity-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
+.activity-desc {
+  flex: 1;
+  color: var(--text);
+}
+
+.activity-time {
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.revision-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.revision-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 99px;
+  font-weight: 500;
+  margin-left: 0.35rem;
+}
+
+.badge-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-in_progress {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge-done {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.attachment-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+  font-size: 0.82rem;
+}
+
+.attachment-icon {
+  font-size: 1rem;
+}
+
+.attachment-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attachment-size {
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.assignee-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.78rem;
+  margin: 0.2rem;
+}
+
+.btn-fav {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: 0.15s;
+}
+
+.btn-fav.active {
+  background: #fef9c3;
+  border-color: #fde047;
+  color: #713f12;
+}
+
+.relation-task-ac-wrap {
+  position: relative;
+}
+
+.relation-task-ac-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 40;
+  margin: 0.15rem 0 0;
+  padding: 0.25rem 0;
+  max-height: 14rem;
+  overflow-y: auto;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 0.82rem;
+}
+
+.relation-task-ac-list[hidden] {
+  display: none !important;
+}
+
+.relation-task-ac-item {
+  padding: 0.4rem 0.65rem;
+  cursor: pointer;
+  line-height: 1.35;
+}
+
+.relation-task-ac-item:hover,
+.relation-task-ac-item[aria-selected='true'] {
+  background: var(--surface-hover, rgba(0, 0, 0, 0.04));
+}
+
+.relation-task-ac-item small {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}

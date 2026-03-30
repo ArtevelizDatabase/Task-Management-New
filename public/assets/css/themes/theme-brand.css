@@ -1,0 +1,43 @@
+/*
+ * Optional brand theme palette.
+ * Activate with: document.documentElement.setAttribute('data-theme', 'brand')
+ */
+html[data-theme="brand"] {
+  color-scheme: light;
+  --bg: #f8f7ff;
+  --surface: #ffffff;
+  --surface-2: #f1f0ff;
+  --sidebar-bg: #f5f3ff;
+  --border: #d8d3ff;
+  --border-2: #bcb3ff;
+  --text: #16122e;
+  --text-2: #574f83;
+  --text-3: #8b84b2;
+  --accent: #6d28d9;
+  --accent-soft: #ede9fe;
+  --focus-ring: rgba(109, 40, 217, 0.15);
+  --danger: #b91c1c;
+  --danger-soft: #fee2e2;
+  --success: #15803d;
+  --success-soft: #dcfce7;
+  --warn: #b45309;
+  --warn-soft: #ffedd5;
+  --btn-primary-bg: #6d28d9;
+  --btn-primary-bg-hover: #5b21b6;
+  --btn-primary-text: #ffffff;
+  --on-solid: #ffffff;
+  --text-strong: #2b2450;
+  --danger-border: #fca5a5;
+  --danger-soft-hover: #fecaca;
+  --success-border: #86efac;
+  --priority-low-bg: #e8f5e9;
+  --priority-low-text: #2e7d32;
+  --priority-medium-bg: #fff8e1;
+  --priority-medium-text: #b45309;
+  --priority-high-bg: #fff3e0;
+  --priority-high-text: #c2410c;
+  --priority-critical-bg: #ffebee;
+  --priority-critical-text: #b91c1c;
+  --shadow: 0 1px 2px rgba(37, 26, 89, 0.05);
+  --shadow-md: 0 2px 8px rgba(37, 26, 89, 0.08);
+}

@@ -1,0 +1,429 @@
+.task-show-card {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-lg, 12px);
+  border: 1px solid var(--border);
+  background: var(--bg-card, var(--surface));
+}
+
+.task-show-hint {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  background: var(--surface-2, rgba(0, 0, 0, 0.03));
+  border: 1px solid var(--border-light, var(--border));
+  border-radius: var(--radius-md, 8px);
+}
+
+.task-show-hint-term {
+  color: var(--text, inherit);
+}
+
+.task-show-hint code {
+  font-size: 0.78em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--surface, #f3f4f6);
+}
+
+.task-show-no-project {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.task-show-fields-heading {
+  margin: 1rem 0 0.15rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.task-show-fields-sub {
+  margin: 0 0 0.75rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.task-show-fields-sub a {
+  color: var(--accent);
+}
+
+.task-show-fields-empty {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-md, 8px);
+  background: var(--surface-2, rgba(0, 0, 0, 0.03));
+  border: 1px solid var(--border-light, var(--border));
+}
+
+.task-show-fields-empty a {
+  color: var(--accent);
+}
+
+/* Panel proyek: satu Editor.js untuk semua field teks */
+.project-task-desc-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.project-task-secondary-fields {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--border-light, var(--border));
+}
+
+.project-task-secondary-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.project-task-secondary-row {
+  margin-bottom: 0.75rem;
+}
+
+.project-task-secondary-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.project-task-secondary-row .form-control {
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.project-task-secondary-richtext-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.project-task-secondary-richtext-preview {
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md, 8px);
+  background: var(--surface-2, rgba(0, 0, 0, 0.02));
+  font-size: 0.875rem;
+}
+
+.project-task-fields-readonly--single-desc .project-task-readonly-body {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.project-task-fields-unified-root {
+  margin-top: 0.35rem;
+}
+
+.project-task-fields-unified-holder {
+  min-height: 200px;
+  padding: 0.5rem 0.35rem 0.65rem 0.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md, 8px);
+  background: var(--surface, #fff);
+}
+
+.project-task-fields-unified-holder.rt-js-editor-shell .codex-editor__redactor {
+  padding-left: 46px !important;
+  padding-right: 10px !important;
+  /* Editor.js sets large inline padding-bottom; keep panel compact in drawer */
+  padding-bottom: 1.75rem !important;
+}
+
+/* Drawer field area: no card chrome — editor sits flush under panel head */
+.project-task-panel-fields {
+  margin-top: 0.35rem;
+}
+
+.project-task-panel-fields .project-task-fields-unified-root {
+  margin-top: 0;
+}
+
+.project-task-fields-unified-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-task-fields-unified-empty-hint {
+  margin: 0.65rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.project-task-fields-unified-empty-hint a {
+  color: var(--accent);
+}
+
+.project-task-fields-unified-holder--readonly-empty {
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md, 8px);
+  background: var(--surface-2, rgba(0, 0, 0, 0.02));
+}
+
+.project-task-fields-readonly-empty-msg {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Panel: blok metadata (bergaya “Properties”) di bawah editor */
+.project-task-panel-properties {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light, var(--border));
+}
+
+.project-task-panel-properties-title {
+  margin: 0 0 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.project-task-panel-properties-dl {
+  margin: 0;
+}
+
+.project-task-prop-row {
+  display: grid;
+  grid-template-columns: minmax(100px, 130px) 1fr;
+  gap: 0.35rem 0.75rem;
+  align-items: start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light, var(--border));
+  font-size: 0.85rem;
+}
+
+.project-task-prop-row:last-child {
+  border-bottom: none;
+}
+
+.project-task-prop-label {
+  margin: 0;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.project-task-prop-value {
+  margin: 0;
+  color: var(--text, inherit);
+  word-break: break-word;
+}
+
+.project-task-prop-strong {
+  font-weight: 600;
+}
+
+.project-task-prop-muted {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.project-task-prop-placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.project-task-prop-status {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  background: var(--surface-2, rgba(0, 0, 0, 0.04));
+}
+
+.project-task-prop-status--done {
+  color: #15803d;
+  background: rgba(22, 163, 74, 0.12);
+}
+
+.project-task-prop-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.project-task-prop-link:hover {
+  text-decoration: underline;
+}
+
+.project-task-prop-linklist {
+  margin: 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+
+.project-task-prop-linklist li {
+  margin: 0.2rem 0;
+}
+
+.project-task-prop-rel-type {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-right: 0.35rem;
+}
+
+.project-task-fields-other-heading {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.project-task-fields-readonly-row {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-light, var(--border));
+}
+
+.project-task-fields-readonly-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.project-task-fields-readonly-value {
+  font-size: 0.9rem;
+}
+
+.task-show-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.task-show-fields {
+  margin: 0;
+}
+
+.task-show-field-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) 1fr;
+  gap: 0.75rem 1.25rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-light, var(--border));
+  font-size: 0.9rem;
+}
+
+.task-show-field-row:last-child {
+  border-bottom: none;
+}
+
+.task-show-field-row dt {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.task-show-field-row dd {
+  margin: 0;
+  word-break: break-word;
+}
+
+.page-back-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 0.35rem;
+}
+
+.page-back-link:hover {
+  text-decoration: underline;
+}
+
+.task-show-project a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.task-show-client-link {
+  margin-left: 0.25rem;
+  font-size: 0.85em;
+  color: var(--accent);
+}
+
+.editorjs-readonly {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text, inherit);
+}
+
+.editorjs-readonly .editorjs-p,
+.editorjs-readonly .editorjs-h {
+  margin: 0.35em 0;
+}
+
+.editorjs-readonly .editorjs-list {
+  margin: 0.35em 0 0.35em 1.25em;
+  padding: 0;
+}
+
+.editorjs-readonly .editorjs-quote {
+  margin: 0.5em 0;
+  padding: 0.35em 0.75em;
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+}
+
+/* Inline Editor.js (task field richtext — edit di halaman / panel) */
+.task-show-richtext-editor-wrap {
+  width: 100%;
+}
+
+.task-show-richtext-holder {
+  min-height: 160px;
+  padding: 0.5rem 0.35rem 0.65rem 0.15rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius, 8px);
+  background: var(--surface, #fff);
+}
+
+/* Ruang kolom kiri Editor.js (+ blok, grip urutan — perilaku standar Editor.js) */
+.task-show-richtext-holder.rt-js-editor-shell .codex-editor__redactor {
+  padding-left: 46px !important;
+  padding-right: 10px !important;
+}
+
+.task-show-richtext-holder .codex-editor {
+  position: relative;
+  z-index: 1;
+}
+
+.task-show-richtext-actions {
+  margin-top: 0.6rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.task-show-richtext-error {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--danger, #c0392b);
+}

@@ -1,0 +1,189 @@
+.pivot-pagination-wrap {
+  padding: 12px 16px 16px;
+}
+
+.p-submissions-head {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.p-submissions-desc { font-size: 13px; color: var(--text-2); }
+.p-inline-code {
+  font-family: var(--mono);
+  background: var(--surface-2);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+.p-submissions-count { font-size: 12px; color: var(--text-3); }
+
+/* Same badge palette as /tasks page */
+:root{
+  --badge-1-bg:#dbeafe;  --badge-1-text:#2563eb;
+  --badge-2-bg:#dcfce7;  --badge-2-text:#16a34a;
+  --badge-3-bg:#fef3c7;  --badge-3-text:#d97706;
+  --badge-4-bg:#fee2e2;  --badge-4-text:#dc2626;
+  --badge-5-bg:#f3e8ff;  --badge-5-text:#9333ea;
+  --badge-6-bg:#fce7f3;  --badge-6-text:#db2777;
+  --badge-7-bg:#e0f2fe;  --badge-7-text:#0284c7;
+  --badge-8-bg:#f0fdf4;  --badge-8-text:#15803d;
+  --badge-9-bg:#fff7ed;  --badge-9-text:#c2410c;
+  --badge-10-bg:#fdf4ff; --badge-10-text:#a21caf;
+  --badge-11-bg:#ecfdf5; --badge-11-text:#047857;
+  --badge-12-bg:#eff6ff; --badge-12-text:#1d4ed8;
+  --badge-13-bg:#fef2f2; --badge-13-text:#b91c1c;
+  --badge-14-bg:#f7fee7; --badge-14-text:#65a30d;
+  --badge-15-bg:#f0fdfa; --badge-15-text:#0f766e;
+  --badge-16-bg:#fefce8; --badge-16-text:#a16207;
+  --badge-17-bg:#fff1f2; --badge-17-text:#be123c;
+  --badge-18-bg:#f0f9ff; --badge-18-text:#0369a1;
+  --badge-19-bg:#fdf2f8; --badge-19-text:#be185d;
+  --badge-20-bg:#e8f5e9; --badge-20-text:#2e7d32;
+  --badge-21-bg:#e3f2fd; --badge-21-text:#1565c0;
+  --badge-22-bg:#fbe9e7; --badge-22-text:#bf360c;
+  --badge-23-bg:#ede7f6; --badge-23-text:#4527a0;
+  --badge-24-bg:#e0f7fa; --badge-24-text:#00695c;
+}
+html[data-theme="dark"]{
+  --badge-1-bg:color-mix(in oklab, #2563eb 22%, var(--surface) 78%);  --badge-1-text:#93c5fd;
+  --badge-2-bg:color-mix(in oklab, #16a34a 22%, var(--surface) 78%);  --badge-2-text:#86efac;
+  --badge-3-bg:color-mix(in oklab, #d97706 24%, var(--surface) 76%);  --badge-3-text:#fcd34d;
+  --badge-4-bg:color-mix(in oklab, #dc2626 20%, var(--surface) 80%);  --badge-4-text:#fca5a5;
+  --badge-5-bg:color-mix(in oklab, #9333ea 20%, var(--surface) 80%);  --badge-5-text:#d8b4fe;
+  --badge-6-bg:color-mix(in oklab, #db2777 18%, var(--surface) 82%);  --badge-6-text:#f9a8d4;
+  --badge-7-bg:color-mix(in oklab, #0284c7 20%, var(--surface) 80%);  --badge-7-text:#7dd3fc;
+  --badge-8-bg:color-mix(in oklab, #15803d 22%, var(--surface) 78%);  --badge-8-text:#bbf7d0;
+  --badge-9-bg:color-mix(in oklab, #c2410c 22%, var(--surface) 78%);  --badge-9-text:#fdba74;
+  --badge-10-bg:color-mix(in oklab, #a21caf 18%, var(--surface) 82%); --badge-10-text:#f5d0fe;
+  --badge-11-bg:color-mix(in oklab, #047857 20%, var(--surface) 80%); --badge-11-text:#6ee7b7;
+  --badge-12-bg:color-mix(in oklab, #1d4ed8 22%, var(--surface) 78%); --badge-12-text:#bfdbfe;
+  --badge-13-bg:color-mix(in oklab, #b91c1c 18%, var(--surface) 82%); --badge-13-text:#fecaca;
+  --badge-14-bg:color-mix(in oklab, #65a30d 22%, var(--surface) 78%); --badge-14-text:#d9f99d;
+  --badge-15-bg:color-mix(in oklab, #0f766e 22%, var(--surface) 78%); --badge-15-text:#99f6e4;
+  --badge-16-bg:color-mix(in oklab, #a16207 22%, var(--surface) 78%); --badge-16-text:#fde68a;
+  --badge-17-bg:color-mix(in oklab, #be123c 18%, var(--surface) 82%); --badge-17-text:#fecdd3;
+  --badge-18-bg:color-mix(in oklab, #0369a1 22%, var(--surface) 78%); --badge-18-text:#bae6fd;
+  --badge-19-bg:color-mix(in oklab, #be185d 18%, var(--surface) 82%); --badge-19-text:#fbcfe8;
+  --badge-20-bg:color-mix(in oklab, #2e7d32 20%, var(--surface) 80%); --badge-20-text:#a7f3d0;
+  --badge-21-bg:color-mix(in oklab, #1565c0 22%, var(--surface) 78%); --badge-21-text:#c7d2fe;
+  --badge-22-bg:color-mix(in oklab, #bf360c 22%, var(--surface) 78%); --badge-22-text:#fed7aa;
+  --badge-23-bg:color-mix(in oklab, #4527a0 20%, var(--surface) 80%); --badge-23-text:#ddd6fe;
+  --badge-24-bg:color-mix(in oklab, #00695c 22%, var(--surface) 78%); --badge-24-text:#5eead4;
+}
+
+.p-sub-id, .p-task-link { font-family: var(--mono); font-size: 11px; }
+/* center all cells, keep long text column left-aligned */
+table tbody td { text-align: center; }
+table tbody td:nth-child(3) { text-align: left; }
+.p-sub-id { color: var(--text-3); }
+.p-task-link, .p-link { color: var(--accent); }
+.p-sub-date { white-space: nowrap; font-size: 12px; }
+.p-muted { color: var(--text-3); }
+.p-account { font-size: 12px; color: var(--text-2); }
+.p-category-badge {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 4px 11px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.p-account-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.p-link {
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.action-cell-compact .btn-icon {
+  min-width: 22px;
+  min-height: 22px;
+  padding: 3px;
+}
+.action-cell-compact .btn-icon svg.lucide {
+  width: 12px;
+  height: 12px;
+}
+.action-cell-compact .btn-icon .fa-solid {
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* Edit submission modal (Daftar Setor) */
+.p-sub-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.32);
+}
+.p-sub-overlay.is-open {
+  display: flex;
+}
+.p-sub-edit-modal.modal-setor {
+  max-width: 520px;
+  width: min(94vw, 520px);
+}
+.p-sub-edit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.p-sub-edit-cat {
+  margin-bottom: 16px;
+}
+.p-sub-edit-meta.setor-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 11px 13px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.p-sub-edit-meta .setor-meta-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-1);
+}
+.p-sub-edit-footer.modal-footer {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.p-sub-edit-footer-spacer {
+  flex: 1 1 32px;
+  min-width: 8px;
+  height: 1px;
+}
+.icon-sm {
+  width: 13px;
+  height: 13px;
+}
+@media (max-width: 640px) {
+  .p-sub-edit-grid {
+    grid-template-columns: 1fr;
+  }
+  .p-sub-edit-meta.setor-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-submissions-head { align-items: flex-start; }
+}

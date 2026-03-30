@@ -1,0 +1,169 @@
+.vendor-create-card {
+  padding: 12px 14px;
+}
+
+.vendor-filter-card {
+  margin-bottom: 16px !important;
+}
+
+.vendor-table-card {
+  margin-top: 0;
+}
+
+.vendor-create-form {
+  display: grid;
+  grid-template-columns: minmax(160px, 2fr) repeat(6, minmax(105px, 1fr)) auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.vendor-create-submit {
+  min-width: 120px;
+  justify-content: center;
+}
+
+.vendor-table-compact .vendor-main {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+.vendor-table-compact .vendor-sub {
+  margin-top: 2px;
+  font-size: 10px;
+  color: var(--text-3);
+}
+.vendor-table-compact .badge {
+  text-transform: capitalize;
+}
+.vendor-table-compact td,
+.vendor-table-compact th {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.vendor-table-compact td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.vendor-row-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vendor-row-actions .inline-form {
+  display: inline-flex;
+}
+
+.vendor-modal {
+  max-width: 840px;
+  width: 96vw;
+}
+
+.vendor-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.vendor-modal-section {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+  padding: 14px;
+}
+
+.vendor-panel-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-2);
+  margin-bottom: 8px;
+}
+
+.vendor-panel-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.vendor-panel-form .btn {
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.vendor-modal-section .vendor-panel-form + .vendor-panel-form {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.vendor-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.vendor-field-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.vendor-field-help {
+  font-size: 10px;
+  color: var(--text-3);
+  line-height: 1.35;
+}
+
+.vendor-target-form {
+  grid-template-columns: minmax(120px, 1fr) auto;
+  align-items: end;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.vendor-allocation-form .btn {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+.vendor-target-form .btn {
+  min-width: 100px;
+  justify-content: center;
+}
+
+.vendor-multiselect {
+  min-height: 92px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+@media (max-width: 1100px) {
+  .vendor-create-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vendor-create-submit {
+    grid-column: 1 / -1;
+  }
+
+  .vendor-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .vendor-create-form {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-filter-card {
+    margin-bottom: 12px !important;
+  }
+
+  .vendor-row-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

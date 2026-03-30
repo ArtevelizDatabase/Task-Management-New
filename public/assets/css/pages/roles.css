@@ -1,0 +1,307 @@
+/* ══════════════════════════════════════
+   ROLE CONFIGURATION PAGE
+══════════════════════════════════════ */
+
+/* ── Legend ── */
+.perm-legend {
+  padding: 16px 20px;
+}
+.perm-legend-title {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.perm-legend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.perm-legend-group {}
+.perm-legend-group-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--text-3);
+  margin-bottom: 6px;
+}
+.perm-tag {
+  display: block;
+  font-size: 11px;
+  color: var(--text-2);
+  margin-bottom: 3px;
+  line-height: 1.5;
+}
+.perm-tag code {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 3px;
+  padding: 1px 4px;
+}
+
+/* ── Roles grid ── */
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+/* ── Role card ── */
+.role-card { padding: 20px; }
+.role-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.role-badge-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.role-card-info { flex: 1; min-width: 0; }
+.role-card-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.badge-system {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--surface-2);
+  color: var(--text-3);
+  border: 1px solid var(--border);
+}
+.role-card-desc {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-top: 3px;
+  line-height: 1.5;
+}
+.role-card-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+/* ── Stats row ── */
+.role-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 14px;
+}
+.role-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.role-stat-num {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+.role-stat-label {
+  font-size: 11px;
+  color: var(--text-3);
+}
+.role-perm-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.role-perm-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width .3s ease;
+  min-width: 4px;
+}
+
+/* ── Permission matrix in card ── */
+.perm-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.perm-group {}
+.perm-group-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--text-3);
+  margin-bottom: 5px;
+}
+.perm-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.perm-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.perm-has {
+  background: var(--success-soft);
+  color: var(--success);
+  border: 1px solid var(--success-border);
+}
+.perm-missing {
+  background: var(--surface-2);
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  text-decoration: line-through;
+  opacity: .6;
+}
+
+/* ── Permission editor (in modal) ── */
+.perm-editor {
+  margin-top: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.perm-editor-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+.perm-quick-btns { display: flex; gap: 6px; }
+.mb-0 { margin-bottom: 0 !important; }
+
+.perm-edit-group {
+  border-bottom: 1px solid var(--border);
+}
+.perm-edit-group:last-child { border-bottom: none; }
+.perm-edit-group-label {
+  padding: 8px 16px;
+  background: var(--surface-2);
+  font-weight: 600;
+  font-size: 12px;
+}
+.perm-edit-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0;
+  padding: 4px 8px;
+}
+.perm-checkbox {
+  padding: 7px 8px;
+  border-radius: var(--radius);
+  transition: background .12s;
+  gap: 10px;
+  align-items: flex-start;
+}
+.perm-checkbox:hover { background: var(--surface-2); }
+.perm-key {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 3px;
+  padding: 1px 5px;
+  display: block;
+  margin-bottom: 2px;
+}
+.perm-label-text {
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+/* ── System role notice ── */
+.role-system-notice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  margin-bottom: 16px;
+  background: var(--warn-soft);
+  color: var(--warn);
+  border: 1px solid #fde68a;
+}
+.role-system-notice-success {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: #c7d2fe;
+}
+
+/* ── Modal large ── */
+.modal-lg {
+  width: min(700px, 96vw) !important;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.modal-lg .modal-body {
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* ── Color picker ── */
+.color-pick-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.form-control-color {
+  width: 44px;
+  height: 36px;
+  padding: 2px 3px;
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  cursor: pointer;
+  background: var(--bg);
+}
+.color-presets {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.color-preset {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform .12s, border-color .12s;
+}
+.color-preset:hover {
+  transform: scale(1.2);
+  border-color: var(--text-2);
+}
+
+@media (max-width: 768px) {
+  .roles-grid { grid-template-columns: 1fr; }
+  .perm-edit-items { grid-template-columns: 1fr; }
+}
