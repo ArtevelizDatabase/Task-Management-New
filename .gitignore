@@ -138,3 +138,12 @@ PRODUCTION-DEPLOY.backup.*.zip
 # Local audit notes / scripts (keep locally, not in repo)
 AUDIT_BUG_REPORT.md
 build-production-zip.sh
+
+# Local scratch / one-off tools
+output.html
+warnastyle.html
+fix_db.php
+env
+
+# Local backup folders
+bcakup/
