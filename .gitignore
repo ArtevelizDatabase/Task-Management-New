@@ -131,3 +131,10 @@ _modules/*
 # Production deploy artifacts
 PRODUCTION-DEPLOY*.zip
 task-management-production-*.zip
+
+# Local backups
+PRODUCTION-DEPLOY.backup.*.zip
+
+# Local audit notes / scripts (keep locally, not in repo)
+AUDIT_BUG_REPORT.md
+build-production-zip.sh
